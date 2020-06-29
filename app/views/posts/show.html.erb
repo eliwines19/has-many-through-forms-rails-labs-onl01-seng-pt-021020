@@ -18,3 +18,9 @@ Commentators:
  </li>
  <% end %>
 </ul>
+
+<%= form_for @post.comments.build do |f| %>
+  <%= f.hidden_field :post_id %>
+  <p>
+
+  </p>
