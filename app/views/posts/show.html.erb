@@ -12,7 +12,9 @@ Categories: <%= @post.categories.map(&name).join(' ') %>
 
 Commentators:
 <ul>
+  <%= @post.users.distinct.each do |u| %>
  <li>
-
+   <%= link_to u.username, user_path(u) %>
  </li>
+ <% end %>
 </ul>
