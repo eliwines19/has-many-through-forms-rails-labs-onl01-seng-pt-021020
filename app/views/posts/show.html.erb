@@ -29,5 +29,9 @@ Commentators:
     <%= uf.text_field :username %>
   <% end %>
   <p>
-
+    <%= f.label :content, "New Comment" %><br>
+    <%= f.text_area :content %>
   </p>
+  <br />
+  <%= f.submit %>
+<% end %>
