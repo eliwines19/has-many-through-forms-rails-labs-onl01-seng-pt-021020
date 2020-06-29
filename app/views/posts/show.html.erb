@@ -22,5 +22,12 @@ Commentators:
 <%= form_for @post.comments.build do |f| %>
   <%= f.hidden_field :post_id %>
   <p>
+    <%= f.collection_select :user_id, User.all, :id, :username %>
+  </p>
+  <%= f.fields_for :user, User.new do |uf| %>
+    <%= uf.label :username %>
+    <%= uf.text_field :username %>
+  <% end %>
+  <p>
 
   </p>
