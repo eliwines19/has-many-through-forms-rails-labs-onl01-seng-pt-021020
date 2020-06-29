@@ -1,1 +1,11 @@
+<%= post.title %>
+<%= post.content %>
 
+Categories: <%= @post.categories.map(&name).join(' ') %>
+<ul>
+  <% @post.comments.each do |c| %>
+    <li>
+      <%= @comment.user.username %> says: <%= comment.content %>
+    </li>
+  <% end %>
+</ul>
