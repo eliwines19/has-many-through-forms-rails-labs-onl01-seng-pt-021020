@@ -1,5 +1,5 @@
-<%= post.title %>
-<%= post.content %>
+<%= @post.title %>
+<%= @post.content %>
 
 Categories: <%= @post.categories.map(&name).join(' ') %>
 <ul>
